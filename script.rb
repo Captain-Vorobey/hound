@@ -18,22 +18,24 @@ class Histogram_Generator
 end
 
 module App
-  Text = 'When Mr. and Mrs. Dursley woke up on the dull, gray Tuesday our story
+  TEXT = 'When Mr. and Mrs. Dursley woke up on the dull, gray Tuesday our story
 		starts, there was nothing about the cloudy sky outside to suggest that
 		strange and mysterious things would soon be happening all over the
 		country. Mr. Dursley hummed as he picked out his most boring tie for
 		work, and Mrs. Dursley gossiped away happily as she wrestled a screaming
-		Dudley into his high chair.'
+    Dudley into his high chair.'.freeze
+    
   def perform
     text = ''
     puts('reading file')
     puts("extracted string: #{text}")
-    histogram = Histogram_Generator.processString({ string: Text })
+    histogram = Histogram_Generator.processString({ string: TEXT })
     puts('generated histogram:')
     puts(histogram)
     puts('sorted histogram:')
     puts(Histogram_Generator.sort_histogram(histogram))
   end
+
   module_function :perform
 
   def number_to_word(number)
