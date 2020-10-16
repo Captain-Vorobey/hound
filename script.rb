@@ -23,13 +23,13 @@ module App
 		strange and mysterious things would soon be happening all over the
 		country. Mr. Dursley hummed as he picked out his most boring tie for
 		work, and Mrs. Dursley gossiped away happily as she wrestled a screaming
-    Dudley into his high chair.'.freeze
+    		Dudley into his high chair.'.freeze
     
   def perform
     text = ''
     puts('reading file')
     puts("extracted string: #{text}")
-    histogram = Histogram_Generator.processString({ string: TEXT })
+    histogram = Histogram_Generator.processString(string: TEXT)
     puts('generated histogram:')
     puts(histogram)
     puts('sorted histogram:')
