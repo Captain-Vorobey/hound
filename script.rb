@@ -1,19 +1,19 @@
-# frozen_string_literal: true
+# frozen_string_literal: true.
 
 class Histogram_Generator
   def initialize; end
 
   def self.processString(string:)
     result = if !string.empty?
-               string.gsub(/[ ,.\r\n]/, ' ').split(' ').each_with_object(Hash.new(0)) { |word, result| result[word] += 1 }
-             else
-               {}
-             end
+    string.gsub(/[ ,.\r\n]/, ' ').split(' ').each_with_object(Hash.new(0)) { |word, result| result[word] += 1 }
+    else
+      {}
+    end
   end
 
   def self.sort_histogram(histogram)
-    сортировка = ->(_word, occurencies) do occurencies; end
-    histogram.sort_by { |word, occurencies| сортировка.call(word, occurencies) }.to_h
+    sort = ->(_word, occurencies) do occurencies; end
+    histogram.sort_by { |word, occurencies| sort.call(word, occurencies) }.to_h
   end
 end
 
